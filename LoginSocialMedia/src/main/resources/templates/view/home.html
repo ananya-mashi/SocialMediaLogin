@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>user login</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <link rel="stylesheet" th:href="@{/css/home.css}"/>
+
+</head>
+<body>
+
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <h1 style="text-align:center">Login with Social Media or Manually</h1>
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
+
+      <div class="col">
+        <a th:href="@{'/facebookLogin'}" class="fb btn">
+          <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+         </a>
+        <a href="#" class="twitter btn">
+          <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+        </a>
+          <a href="#" class="linkedin btn">
+          <i class="fa fa-linkedin fa-fw"></i> Login with Linkedin
+        </a>
+        <a th:href="@{'/googleLogin'}" class="google btn"><i class="fa fa-google fa-fw">
+          </i> Login with Google+
+        </a>
+      </div>
+
+      <div class="col">
+        <div class="hide-md-lg"><br>
+          <h2>Or sign in manually:</h2>
+        </div>
+<br><br>
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+      </div>
+      
+    </div>
+  </form>
+</div>
+
+<div class="bottom-container">
+  <div class="row">
+    <div class="col">
+      <a href="#" style="color:white" class="btn">Sign up</a>
+    </div>
+    <div class="col">
+      <a href="#" style="color:white" class="btn">Forgot password?</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
